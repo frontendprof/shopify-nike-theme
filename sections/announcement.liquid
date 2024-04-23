@@ -17,7 +17,7 @@
 
       <div class="a-bar-right">
         <ul class="a-bar-inner-list">
-          {% if section.block.size == 0 %}
+          {%- if section.blocks.size == 0 -%}
             <li>
               <a href="#">Help</a>
             </li>
@@ -35,17 +35,15 @@
               {% endif %}
             {% endif %}
 
-          {% else %}
+          {%- else -%}
             {% for block in section.blocks %}
               <li>
-                <a href="{{ block.settings.link }}">{{ block.settings.text }}</a>
+                <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
               </li>
             {% endfor %}
-          {% endif %}
+          {%- endif -%}
         </ul>
       </div>
-
-      
     </div>
   </section>
 {% endif %}
@@ -112,8 +110,6 @@
         }
       ]
     }
-  ],
-
-  "presets": []
+  ]
 }
 {% endschema %}

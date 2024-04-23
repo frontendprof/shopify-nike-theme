@@ -1,0 +1,77 @@
+<header class="header-nav">
+  <div>
+    <a href="/">
+      <img
+        width="80"
+        height="50"
+        loading="lazy"
+        src="{{ 'nike.png' | asset_url }}"
+      >
+    </a>
+  </div>
+  <div>
+    <ul class="middle-list">
+      {% for link in linklists['main-menu'].links %}
+        <li>{{ link.title | link_to: link.url }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="r-nav-items">
+    <form action="/search">
+      <input type="search" class="search-nav" placeholder="search">
+    </form>
+    <a href="/">
+      <img
+        width="40"
+        height="40"
+        loading="lazy"
+        src="{{ 'd.png' | asset_url }}"
+      >
+    </a>
+  </div>
+</header>
+
+<style>
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: #fff;
+  }
+
+  .middle-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .middle-list li {
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.5s;
+  }
+
+  .middle-list li:hover {
+    text-decoration: underline;
+  }
+
+  .middle-list a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .r-nav-items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-nav {
+    padding: 10px 15px;
+    border: none;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+  }
+</style>
