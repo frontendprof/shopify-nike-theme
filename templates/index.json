@@ -9,21 +9,10 @@
       "type": "hero",
       "settings": {}
     },
-
-    "more-info": {
-      "type": "more-info",
-      "settings": {}
-    },
-
-    "collections": {
-      "type": "collections",
-      "settings": {}
-    },
-
-    "products": {
-      "type": "products",
+    "cta": {
+      "type": "cta",
       "settings": {}
     }
   },
-  "order": ["banner", "hero", "more-info", "collections", "products"]
+  "order": ["banner", "hero","cta"]
 }
