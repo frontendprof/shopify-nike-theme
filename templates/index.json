@@ -1,11 +1,29 @@
 {
-  "sections":{
-    "banner":{
-      "type":"banner",
-      "settings":{}
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {}
+    },
+
+    "hero": {
+      "type": "hero",
+      "settings": {}
+    },
+
+    "more-info": {
+      "type": "more-info",
+      "settings": {}
+    },
+
+    "collections": {
+      "type": "collections",
+      "settings": {}
+    },
+
+    "products": {
+      "type": "products",
+      "settings": {}
     }
   },
-  "order":[
-    "banner"
-  ]
+  "order": ["banner", "hero", "more-info", "collections", "products"]
 }
